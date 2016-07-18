@@ -35,23 +35,23 @@ class TowersOfHanoi
     @towers
   end
 
-  # def valid_move?
-  #   !@towers[@from].empty? &&
-  #   (@towers[@to].empty? || @towers[@from].last < @towers[@to].last)
-  # end
+   def valid_move?
+     !@towers[@from].empty? &&
+     (@towers[@to].empty? || @towers[@from].last < @towers[@to].last)
+   end
 
   def won?
     @towers[2] == (1..@size).to_a.reverse
   end
 #
-#   def play
-#     build
-#     until won?
-#       display
-#       get_move
-#       move
-#     end
-#   end
+   def play
+     build
+     until won?
+       display
+       get_move
+       move
+    end
+  end
 end
 
 a = TowersOfHanoi.new(3)
